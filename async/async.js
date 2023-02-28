@@ -4,7 +4,14 @@
 // }
 // console.log(f());
 
-async function minimum(){
+async function f(){
     return "babloo";
 }
-console.log(minimum());
+// f() function return a promise, or we can say ki async return a promise
+let fpromise = f();
+fpromise.then(function(data){
+    console.log(data);
+})
+.catch(function(err){
+    console.log(err);
+})
